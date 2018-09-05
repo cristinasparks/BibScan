@@ -122,7 +122,7 @@ article_pdf_download <- function(infilepath, outfilepath = infilepath, bib_forma
   for (i in 1:nrow(my_df)) {
     message(sprintf("number of papers downloaded %i",nb_pdfs))
     # my_df$path[i] <- paste0(file.path(pdf_output_dir, my_df$name[i]), '.pdf')
-    tryCatch(crminer::crm_text(my_df$links[[i]], type = "pdf", cache=FALSE, overwrite_unspecified=FALSE),
+    tryCatch(crminer::crm_text(my_df$links[[i]], type = "pdf", cache=FALSE, overwrite_unspecified=TRUE),
              # my_df$downloaded_file[i] <- crminer::crm_cache$list()[i],
              # (url, my_df$path[i], overwrite_unspecified = TRUE),
              error=function(cond) {
