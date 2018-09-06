@@ -114,7 +114,7 @@ article_pdf_download <- function(infilepath, outfilepath = infilepath, bib_forma
   my_df$downloaded_file <- as.character(NA)
 
   # Clear the cache
-  crminer::crm_cache$delete_all()
+  c#rminer::crm_cache$delete_all()
   nb_pdfs <- length(crminer::crm_cache$list())
   old_cache <- crminer::crm_cache$delete_all()
 
